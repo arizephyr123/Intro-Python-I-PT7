@@ -14,6 +14,7 @@ has the following keys:
  - lon: a signed integer representing a longitude value
  - name: a name string for this location
 """
+# sets and dictionaries are NOT ordered
 
 waypoints = [
     {

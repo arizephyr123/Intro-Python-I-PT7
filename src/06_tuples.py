@@ -1,7 +1,7 @@
 """
 Python tuples are sort of like lists, except they're immutable and
 are usually used to hold heterogenous data, as opposed to lists
-which are typically used to hold homogenous data. Tuples use
+which are typically used to hold homogenous data (but can hold heterogenous data). Tuples use
 parens instead of square brackets.
 
 More specifically, tuples are faster than lists. If you're looking
@@ -17,6 +17,7 @@ automatically.
 
 import math
 
+
 def dist(a, b):
     """Compute the distance between two x,y points."""
     x0, y0 = a  # Destructuring assignment
@@ -24,12 +25,12 @@ def dist(a, b):
 
     return math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
 
+
 a = (2, 7)   # <-- x,y coordinates stored in tuples
 b = (-14, 72)
 
 # Prints "Distance is 66.94"
 print("Distance is: {:.2f}".format(dist(a, b)))
-
 
 
 # Write a function `print_tuple` that prints all the values in a tuple
