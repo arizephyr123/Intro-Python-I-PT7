@@ -55,5 +55,8 @@ for entry in waypoints:
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 
-for loc in waypoints:
-    print(loc['lat'], loc['lon'], loc['name'])
+# for loc in waypoints:
+#     print(loc['lat'], loc['lon'], loc['name'])
+
+# or for nested list comprehension
+[print(loc[key]) for loc in waypoints for key in loc]
