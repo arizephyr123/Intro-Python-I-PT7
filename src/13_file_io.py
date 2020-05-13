@@ -27,5 +27,5 @@ bar_file.write(
 bar_file.close()
 
 # After a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will automatically fail. => ValueError: I/O operation on closed file.
-bar_file = open('bar.txt', 'r')
-print(bar_file.read())
+bar_read = open('bar.txt', 'r')
+print(bar_read.read())

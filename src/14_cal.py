@@ -35,12 +35,24 @@ from datetime import datetime
 today = datetime.today()
 month, year = today.month, today.year
 
-# capture command line inputs in a variable
+
 cal = calendar.TextCalendar(firstweekday=6)
+# print(cal.prmonth(year, month))
 
-
+# capture command line inputs in a variable
 # print the calendar
 # handle different numbers of command line arguements
 
-if len(sys.argv) == 0:
-    print(cal)
+if len(sys.argv) == 1:
+    print(cal.prmonth(year, month))
+
+elif len(sys.argv) == 2:
+    print(cal.prmonth(today.year, int(sys.argv[1])))
+
+elif len(sys.argv) == 3:
+    print(cal.prmonth(
+        int(sys.argv[2]), int(sys.argv[1])))
+
+else:
+    print("usage: filename [month] [year]")
+    sys.exit(1)
